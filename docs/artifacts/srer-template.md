@@ -9,7 +9,7 @@
 | SRER ID | SRER-{PROJECT}-{NNN} |
 | Date | {YYYY-MM-DD} |
 | Service Summary | {1–2 sentences identifying the service and the release being handed off} |
-| Status | Draft |
+| Status | Draft / Validated / Freeze Pending / Frozen |
 
 ---
 

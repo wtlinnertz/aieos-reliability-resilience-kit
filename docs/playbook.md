@@ -302,3 +302,79 @@ If active operation reveals that monitoring coverage is insufficient to calculat
 2. Create an IR for any incidents that occurred during the coverage gap if the gap was caused by or contributed to an incident.
 3. Do not report SLO compliance for periods where data is unavailable — document the gap instead.
 4. Initiate instrumentation improvement as a follow-up action in the current period.
+
+---
+
+## Amendment Procedure
+
+A frozen artifact may be corrected in place without re-validation when **all** of the following criteria are met:
+
+1. The correction does not affect any field evaluated by a hard gate.
+2. The correction does not change scope, decisions, owners, or technical specifications.
+3. The correction does not affect any field referenced by a downstream artifact.
+
+**Procedure:** Make the correction and add an Amendment Log entry to the artifact's Document Control section: date, what changed, materiality criterion cited, and who authorized the change. No re-validation is required.
+
+**If there is any ambiguity** about whether a change is non-material, treat it as material and issue a new artifact version. The amendment path must not become a workaround for the version protocol.
+
+---
+
+## Escalation Paths
+
+This kit is the primary escalation source in the AIEOS system. SEV1/2 incidents and recurring reliability patterns may warrant upstream re-entry in EEK or PIK.
+
+### Trigger 1 — SEV1/2 Incident with Code Defect (to EEK)
+
+**Signal:** An Incident Record documents a SEV1 or SEV2 incident whose root cause is a code defect — not a configuration error, capacity event, or external dependency failure.
+
+**When to assess:**
+- After an IR is frozen for any SEV1 or SEV2 incident
+- Use the escalation assessment prompt (`docs/prompts/escalation-assessment-prompt.md`) to evaluate whether the trigger criteria are met
+
+**Trigger criteria (all must be true):**
+1. The incident severity was SEV1 or SEV2 (see `incident-management-principles.md` §1 for definitions)
+2. The root cause was a code defect (not configuration, capacity, or external dependency)
+3. The defect is in a system whose implementation is governed by the Engineering Execution Kit
+
+**What to do when triggered:**
+1. The reliability owner reviews the frozen IR and confirms the trigger criteria.
+2. Create an escalation record: trigger type (Trigger 1), triggering IR ID, defect description (the specific code defect from the IR root cause section), affected system, and recommended action.
+3. Send the escalation record to the EEK team. They will create a Kit Entry Record and handle the fix.
+4. Track the EEK defect fix in the next RHR (reference the IR and the EEK fix ticket in the RHR follow-up actions section).
+
+**A human must authorize** the escalation decision.
+
+### Trigger 2 — Recurring Reliability Pattern (to PIK)
+
+**Signal:** Three or more consecutive RHRs for the same service identify the same root cause class in the systemic issues section, with no evidence of effective remediation between review periods.
+
+**When to assess:**
+- When generating an RHR and the systemic issues section shows a recurring pattern
+- Use the escalation assessment prompt to evaluate whether the trigger criteria are met
+
+**Trigger criteria (all must be true):**
+1. Three or more review periods have documented the same root cause class (not just the same symptom)
+2. Each period shows the pattern was present (not just lingering from a prior period)
+3. Prior period follow-up actions either were not completed or did not eliminate the pattern
+
+**What to do when triggered:**
+1. The review owner confirms the pattern by comparing the current RHR against the two prior RHRs.
+2. Create an escalation record: trigger type (Trigger 2), triggering RHR ID (and prior RHR IDs), pattern description (the recurring root cause class), affected service, and recommended action.
+3. Send the escalation record to the PIK team as discovery intake context. The PIK team assesses whether a new discovery engagement is warranted.
+4. Document the escalation in the current RHR's follow-up actions section: "Escalation record sent to PIK team — reference [escalation record ID]."
+
+**A human must authorize** the escalation decision. The judgment that three occurrences constitute a systemic pattern vs. coincidence requires human assessment.
+
+---
+
+## Principle File Revision
+
+When a principle file in `docs/principles/` changes, use the change categories defined in `aieos-spec/docs/principle-file-standard.md`:
+
+| Change Category | Version Bump | Re-Entry Impact |
+|----------------|-------------|-----------------|
+| **Minor** (clarification only) | `v_.x → v_.x+1` | No re-entry required; already-frozen artifacts remain valid |
+| **Significant** (new requirement or tightened constraint) | `v1.x → v1.x+1` | Review artifacts generated after the change against updated principles; already-frozen artifacts are grandfathered |
+| **Breaking** (removal or loosening) | `vN.x → vN+1.0` | Requires service owner authorization and documented business justification; re-entry may be warranted |
+
+Every change to a principle file must bump the version field, even minor clarifications.

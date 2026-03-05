@@ -11,7 +11,7 @@
 | Coverage Period | {YYYY-MM-DD} through {YYYY-MM-DD} |
 | Review Owner | {individual or role} |
 | SRP Reference | SRP-{SERVICE}-{NNN} (version: v{N}, status: Frozen) |
-| Status | Draft |
+| Status | Draft / Validated / Freeze Pending / Frozen |
 
 *If multiple SRP versions were active during the coverage period, list all:*
 *SRP versions: v{N} ({start date} – {end date}), v{N+1} ({start date} – {end date})*

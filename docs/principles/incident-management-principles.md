@@ -1,5 +1,7 @@
 # Incident Management Principles
 
+Version: v1.0
+
 These principles define how this organization classifies, responds to, and learns from incidents. They govern when incidents are declared, how severity is assigned, and what evidence standards apply to incident documentation.
 
 These are **organizational policy documents** — input material for IR generation, not governed artifacts. They answer: "What standards does this organization hold?"
@@ -90,3 +92,17 @@ Post-incident review is valueless if the follow-up actions are never completed. 
 ### Recurring incidents are system failures
 
 An incident that recurs — same root cause, same affected component, same pattern — is evidence that the remediation from the prior incident was insufficient. The RHR's incident summary section must identify recurrence patterns. A pattern of recurring incidents with no systemic remediation is a systemic failure, not a run of bad luck.
+
+---
+
+## Enforcement Mapping
+
+| Rule Category | Enforced By |
+|---------------|-------------|
+| Incident classification — severity definitions, severity must be declared (§1) | `ir-spec.md` §severity_classification hard gate |
+| Response escalation — named responders, timestamps at every step, mitigation vs. resolution distinct (§2) | `ir-spec.md` §timeline hard gate; `ir-spec.md` §incident_commander hard gate |
+| Root cause analysis — contributing factors assessed, proximate vs. root cause distinct (§3) | `ir-spec.md` §root_cause_analysis hard gate |
+| Follow-up actions — named owner, deadline, tracking reference (§4) | `ir-spec.md` §follow_up_actions hard gate |
+| Recurring incidents identified as system failures (§4.4) | `rhr-spec.md` §incident_summary hard gate (RHR must identify recurrence patterns) |
+
+Blameless review culture (§4.1–§4.2) is advisory — it governs how reviews are conducted, which cannot be directly validated by a machine or hard gate.

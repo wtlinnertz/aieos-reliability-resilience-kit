@@ -12,7 +12,7 @@
 | Incident End | {YYYY-MM-DD HH:MM UTC} |
 | Author | {name} |
 | Review Date | {YYYY-MM-DD} |
-| Status | Draft |
+| Status | Draft / Validated / Freeze Pending / Frozen |
 
 ---
 

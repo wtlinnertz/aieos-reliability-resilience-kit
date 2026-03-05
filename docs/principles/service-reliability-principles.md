@@ -1,5 +1,7 @@
 # Service Reliability Principles
 
+Version: v1.0
+
 These principles define how this organization thinks about service reliability: what "working correctly" means, how reliability is measured, and how reliability commitments are made and honored.
 
 These are **organizational policy documents** — input material for SRP generation, not governed artifacts. They answer: "What standards does this organization hold?"
@@ -87,3 +89,16 @@ An SRP revision must be traceable to a trigger: user feedback, contractual requi
 ### Downward revisions require explicit authorization
 
 Lowering an SLO target (making it less strict) is a significant reliability commitment change. It requires explicit authorization by the service owner and must be documented with the business justification. Automatic downward revisions in response to poor performance are not permitted.
+
+---
+
+## Enforcement Mapping
+
+| Rule Category | Enforced By |
+|---------------|-------------|
+| SLO philosophy — targets must have a basis, two SLO minimum, measurement window required (§1) | `srp-spec.md` §slo_definitions hard gate |
+| Error budget — consumption has consequences, defined thresholds required (§2) | `srp-spec.md` §error_budget_policy hard gate |
+| Observability — metric names must match monitoring, data sources identified, alert thresholds numeric (§3) | `srp-spec.md` §alert_configuration hard gate; `srer-spec.md` §monitoring_confirmation hard gate |
+| SLO revision — new version required, justification required, downward revision requires authorization (§4) | Governed by the SRP Revision Protocol in the playbook; `srp-spec.md` §versioning hard gate |
+
+The broader SLO philosophy context (§1.1–§1.2) is advisory — it informs how teams set targets but is validated qualitatively, not by a specific hard gate.

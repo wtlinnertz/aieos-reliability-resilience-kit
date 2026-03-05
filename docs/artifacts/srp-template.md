@@ -10,7 +10,7 @@
 | Service Name | {service name} |
 | Owner | {team or role — not an individual person} |
 | Version | v{N} |
-| Status | Draft |
+| Status | Draft / Validated / Freeze Pending / Frozen |
 | Scope | {which deployment(s) or environment(s) this SRP governs} |
 | SRER Reference | {SRER-{PROJECT}-{NNN}} |
 

@@ -62,6 +62,8 @@ This kit governs how production systems are monitored, measured, and kept runnin
 |------|---------|
 | `prompts/incident-triage-prompt.md` | Adversarial incident analysis (non-governed) |
 | `prompts/slo-calibration-prompt.md` | SLO target recommendations from baseline data (non-governed) |
+| `prompts/escalation-assessment-prompt.md` | Assess IR or RHR against the four AIEOS escalation triggers; produce escalation record if triggered (non-governed) |
+| `prompts/portfolio-health-prompt.md` | Synthesize N RHRs across services for portfolio-level reliability visibility (non-governed) |
 
 ---
 

@@ -38,10 +38,12 @@ Plus one entry gate:
 
 ## Utility Prompts
 
-Two utility prompts support the flow but do not produce governed artifacts:
+Four utility prompts support the flow but do not produce governed artifacts:
 
 - **Incident Triage** (`incident-triage-prompt.md`) — Adversarial analysis of an active incident to prioritize response and identify gaps
 - **SLO Calibration** (`slo-calibration-prompt.md`) — Recommends SLO targets from historical baseline data before SRP authoring
+- **Escalation Assessment** (`escalation-assessment-prompt.md`) — Evaluates a frozen IR or RHR against the four AIEOS escalation triggers; produces a structured escalation record if a trigger is confirmed
+- **Portfolio Health** (`portfolio-health-prompt.md`) — Synthesizes N RHRs across multiple services to surface portfolio-level SLO compliance, error budget risk, and cross-service reliability patterns
 
 ## Key Rules
 

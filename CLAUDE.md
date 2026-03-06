@@ -57,6 +57,7 @@ Six utility prompts support the flow but do not produce governed artifacts:
 - **No inferred information** — mark missing information explicitly, do not fill gaps
 - **SRP is versioned** — when SLOs change, issue a new SRP version; do not edit a frozen SRP
 - **Governance model sync** — `docs/governance-model.md` is a synchronized copy of `aieos-spec/governance-model.md` (canonical authority). Do not edit kit copy directly; update `aieos-spec` first, then sync all kit copies to match exactly. See governance-model.md §15 for versioning and change protocol.
+- **Engagement Record** — RRK maintains the Layer 6 section of the project's ER. Add artifact IDs as they freeze, maintain the IR list as incidents occur, and note SRP version changes. See `docs/playbook.md §Maintaining the Engagement Record` and `aieos-spec/docs/engagement-record-spec.md`.
 
 ## Artifact Flow
 

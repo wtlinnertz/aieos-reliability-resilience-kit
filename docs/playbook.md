@@ -411,3 +411,26 @@ A service owner, engineering lead, or equivalent role must authorize the termina
 - Artifacts are retained — never deleted. Incident Records are especially important to retain for organizational learning.
 - Terminal state does not require re-validation.
 - If a replacement service is deployed, it starts a new artifact series with its own SRER and SRP.
+
+---
+
+## Maintaining the Engagement Record
+
+The Engagement Record (ER) is a project-level artifact that lives in the consuming project at `docs/engagement/er-{initiative}.md`. It spans all AIEOS layers and is maintained by each kit's operators as work passes through. The ER spec and format are defined in `aieos-spec/docs/engagement-record-spec.md`.
+
+**RRK maintains the Layer 6 section of the ER.**
+
+### What to Update During Reliability Operations
+
+| Trigger | ER update |
+|---------|-----------|
+| SRER frozen | Add SRER ID to §5 artifact table |
+| SRP frozen | Add SRP ID and version to §5 |
+| SRP revised (new version) | Add new SRP version to §5; note revision date in Notes column |
+| Incident declared | Add IR ID (placeholder — ID may not be assigned until frozen) to §5 IR list |
+| IR frozen | Confirm IR ID in §5 IR list |
+| RHR frozen | Add RHR ID to §5 RHR list |
+
+### On Service Decommission
+
+When issuing a Deprecation Notice: update §1 Status to `Deprecated` and add the DN ID to §7 Initiative Outcome.

@@ -12,6 +12,8 @@
 | Review Owner | {individual or role} |
 | SRP Reference | SRP-{SERVICE}-{NNN} (version: v{N}, status: Frozen) |
 | Status | Draft / Validated / Freeze Pending / Frozen |
+| Governance Model Version | 1.0 |
+| Prompt Version | {prompt version} |
 
 *If multiple SRP versions were active during the coverage period, list all:*
 *SRP versions: v{N} ({start date} – {end date}), v{N+1} ({start date} – {end date})*

@@ -13,6 +13,8 @@
 | Status | Draft / Validated / Freeze Pending / Frozen |
 | Scope | {which deployment(s) or environment(s) this SRP governs} |
 | SRER Reference | {SRER-{PROJECT}-{NNN}} |
+| Governance Model Version | 1.0 |
+| Prompt Version | {prompt version} |
 
 ---
 

@@ -10,6 +10,8 @@
 | Date | {YYYY-MM-DD} |
 | Service Summary | {1–2 sentences identifying the service and the release being handed off} |
 | Status | Draft / Validated / Freeze Pending / Frozen |
+| Governance Model Version | 1.0 |
+| Prompt Version | N/A |
 
 ---
 

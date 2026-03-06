@@ -74,4 +74,4 @@ CLAUDE.md              # AI operating instructions
 | **6. Reliability & Resilience** | **`aieos-reliability-resilience-kit`** | **Built** |
 | 7. Insight & Evolution | `aieos-insight-evolution-kit` | Planned |
 
-See `aieos-spec/docs/layer-model.md` for the full seven-layer model.
+See `aieos-governance-foundation/docs/layer-model.md` for the full seven-layer model.

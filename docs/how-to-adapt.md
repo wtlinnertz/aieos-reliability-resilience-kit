@@ -43,7 +43,7 @@ Validators evaluate against specs. If a validator is producing unexpected result
 
 ### Governance Model
 
-`docs/governance-model.md` is a synchronized copy of the canonical governance model. Do not edit it. If you believe the governance model should change, update `aieos-spec/governance-model.md` and sync all kit copies.
+`docs/governance-model.md` is a synchronized copy of the canonical governance model. Do not edit it. If you believe the governance model should change, update `aieos-governance-foundation/governance-model.md` and sync all kit copies.
 
 ---
 

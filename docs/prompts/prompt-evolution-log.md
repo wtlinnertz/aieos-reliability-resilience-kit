@@ -1,6 +1,6 @@
 # Prompt Evolution Log — Reliability & Resilience Kit
 
-This log records every version change to every prompt in this kit. It is maintained by kit operators when a prompt version increments. Format defined in `aieos-spec/governance-model.md §16`.
+This log records every version change to every prompt in this kit. It is maintained by kit operators when a prompt version increments. Format defined in `aieos-governance-foundation/governance-model.md §16`.
 
 Generation prompts produce governed artifacts. Utility prompts produce analysis output but no governed artifacts.
 

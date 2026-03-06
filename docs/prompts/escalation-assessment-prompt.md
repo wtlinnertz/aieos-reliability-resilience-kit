@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This utility prompt assesses whether a frozen Incident Record (IR) or Reliability Health Report (RHR) warrants an escalation to an upstream kit. It evaluates the four escalation triggers defined in `aieos-spec/docs/escalation-protocols.md` and produces a structured escalation record if a trigger is confirmed.
+This utility prompt assesses whether a frozen Incident Record (IR) or Reliability Health Report (RHR) warrants an escalation to an upstream kit. It evaluates the four escalation triggers defined in `aieos-governance-foundation/docs/escalation-protocols.md` and produces a structured escalation record if a trigger is confirmed.
 
 This prompt is **non-governed** — it does not produce a governed artifact. Its output is a structured recommendation; a human must authorize any escalation before it is sent.
 

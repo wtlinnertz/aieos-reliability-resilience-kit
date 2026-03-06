@@ -64,6 +64,8 @@ This kit governs how production systems are monitored, measured, and kept runnin
 | `prompts/slo-calibration-prompt.md` | SLO target recommendations from baseline data (non-governed) |
 | `prompts/escalation-assessment-prompt.md` | Assess IR or RHR against the four AIEOS escalation triggers; produce escalation record if triggered (non-governed) |
 | `prompts/portfolio-health-prompt.md` | Synthesize N RHRs across services for portfolio-level reliability visibility (non-governed) |
+| `prompts/rr-srer-consistency-check-prompt.md` | Cross-boundary check: verify SRER accurately reflects RR §7 (SLO baseline, monitoring, open incidents, watch items) |
+| `prompts/srp-rhr-consistency-check-prompt.md` | Intra-kit check: verify RHR SLO targets and error budget calculations are consistent with the SRP |
 
 ---
 

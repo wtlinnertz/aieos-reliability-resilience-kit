@@ -378,3 +378,36 @@ When a principle file in `docs/principles/` changes, use the change categories d
 | **Breaking** (removal or loosening) | `vN.x → vN+1.0` | Requires service owner authorization and documented business justification; re-entry may be warranted |
 
 Every change to a principle file must bump the version field, even minor clarifications.
+
+---
+
+## Deprecation and Sunset
+
+When a service is decommissioned, wound down, or a reliability engagement is cancelled before completion, the artifacts produced by this kit transition to terminal lifecycle states. See the full protocol in `aieos-spec/docs/deprecation-protocol.md`.
+
+### When to Deprecate or Abandon
+
+| Situation | Action |
+|-----------|--------|
+| Service decommissioned after operational life | `Deprecated` on all frozen RRK artifacts for that service (SRER, SRP versions, IR records, RHR reports) |
+| Service migrated to a new system (old replaced by new) | `Deprecated` on old service artifacts; new service produces new artifact series |
+| Reliability engagement cancelled after one or more artifacts are Frozen | `Deprecated` on frozen artifacts; `Abandoned` on any non-frozen artifacts |
+| Reliability engagement cancelled before any artifact is Frozen | `Abandoned` on all in-progress artifacts |
+
+### Who Authorizes
+
+A service owner, engineering lead, or equivalent role must authorize the terminal state transition. For the SRP (which has multiple versions), list all active SRP versions in the DN.
+
+### How to Issue a Deprecation Notice (DN)
+
+1. Confirm the decommission or cancellation decision is authorized.
+2. List all artifacts in the service's reliability series (SRER, all SRP versions, all IRs, all RHRs) with their current status.
+3. For each artifact: if Frozen → `Deprecated`; if not Frozen → `Abandoned`.
+4. Create a DN record at `docs/sdlc/dn-{service-id}-{NNN}.md` using the format in `aieos-spec/docs/deprecation-protocol.md`.
+5. Update each artifact's Status field to its terminal state (non-material amendment; add Amendment Log entry per governance model §6).
+
+### What Does Not Change
+
+- Artifacts are retained — never deleted. Incident Records are especially important to retain for organizational learning.
+- Terminal state does not require re-validation.
+- If a replacement service is deployed, it starts a new artifact series with its own SRER and SRP.

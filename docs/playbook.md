@@ -365,6 +365,33 @@ This kit is the primary escalation source in the AIEOS system. SEV1/2 incidents 
 
 **A human must authorize** the escalation decision. The judgment that three occurrences constitute a systemic pattern vs. coincidence requires human assessment.
 
+### Trigger 3 — SEV1/2 Incident Requiring Structured Diagnosis (to ODK)
+
+**Signal:** A SEV1 or SEV2 incident is declared for a service governed by this kit.
+
+**When to assess:**
+- At incident declaration for any SEV1 or SEV2 incident
+- At incident declaration for lower-severity incidents with significant learning value (operator judgment)
+
+**Trigger criteria (any of these is sufficient):**
+1. Incident severity is SEV1 or SEV2
+2. Operator judgment that the incident has significant learning value regardless of severity
+3. Third occurrence of the same root cause class in RHR systemic issues (even if SEV3/4)
+
+**What to do when triggered:**
+1. The incident owner (or on-call engineer) begins the ODK flow in parallel with incident response.
+2. Complete the Diagnostic Context Record (DCR) using `aieos-operational-diagnostics-kit/docs/artifacts/dcr-template.md` within 2 hours of incident declaration.
+3. Validate and freeze the DCR; proceed with the Investigation Record (INR) after resolution.
+4. After the PMR is frozen, the ODK team provides the PMR ID to the RRK team for inclusion in the next RHR §Incident Summary.
+5. Any PMR corrective actions that require SRP revision trigger the SRP Revision Protocol (see above).
+
+**Relationship to RRK Incident Record:**
+The RRK IR and ODK artifacts are complementary. The IR must be completed for all incidents per Step 3 of this playbook. The ODK adds structured diagnosis depth — the IR documents what happened; the INR documents how the team figured it out; the PMR documents what the organization learned.
+
+**Reference:** See `aieos-operational-diagnostics-kit/docs/playbook.md` for the full ODK process.
+
+**A human must authorize** the escalation decision for lower-severity incidents (SEV3/4). SEV1/2 incidents trigger ODK automatically.
+
 ---
 
 ## Principle File Revision

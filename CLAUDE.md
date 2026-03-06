@@ -75,7 +75,8 @@ Step 3: Reliability Health Report → generate from IR history + SRP + coverage 
 ## Boundary Contracts
 
 - **Upstream:** Receives a frozen Release Record from the Release & Exposure Kit (Layer 5). The RR §7 Handoff to Layer 6 section is the upstream boundary contract — it provides the production state, active monitoring, SLO baseline, open incidents, and recommended watch items. Confirmed via SRER.
-- **Downstream:** Produces frozen RHRs that Layer 7 (Insight & Evolution) uses as reliability trend input. The RHR §5 Layer 7 Feed section is the downstream boundary contract — it provides trend direction, systemic issues, improvement signals, and recommended continued watch items.
+- **Downstream (Layer 7):** Produces frozen RHRs that Layer 7 (Insight & Evolution) uses as reliability trend input. The RHR §5 Layer 7 Feed section is the downstream boundary contract — it provides trend direction, systemic issues, improvement signals, and recommended continued watch items.
+- **Downstream (Layer 8):** SEV1/2 incidents trigger the Operational Diagnostics Kit (ODK, Layer 8). RRK provides SRP context to ODK (service baseline, SLO targets, known failure modes). ODK PMRs feed back into the next RHR §Incident Summary. PMR corrective actions may trigger the SRP Revision Protocol. See `aieos-operational-diagnostics-kit` and `docs/playbook.md §Escalation Paths` for the full cross-kit contract.
 
 ## File Naming
 

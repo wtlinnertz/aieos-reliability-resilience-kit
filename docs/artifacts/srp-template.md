@@ -133,6 +133,8 @@
 
 ## 7. Scope and Exceptions
 
+> **Advisory section** — Required by template structure; evaluated qualitatively. No hard gate applies. Validators note absence but do not block freeze.
+
 **What this SRP does not cover:**
 - {service, component, or environment not governed by this SRP}
 - {boundary of scope}

@@ -171,6 +171,12 @@ The SRP serves three roles:
 
 ---
 
+## Advisory Sections
+
+The following template sections are required by template structure but are evaluated qualitatively — no hard gate applies. Validators note absence but do not block freeze.
+
+- **§7 Scope and Exceptions** — Required in template structure. Validators note absence but do not block freeze. Content is evaluated qualitatively: scope should clarify what this SRP does not govern; exceptions should include expiry date and authorization reference.
+
 ## Hard Gates
 
 1. **document_control** — SRP ID, service name, owner (team/role not individual), version, status, and scope present

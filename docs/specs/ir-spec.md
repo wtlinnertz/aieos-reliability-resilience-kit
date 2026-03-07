@@ -6,6 +6,14 @@ The IR is an **evidence artifact** — it documents what occurred; it does not r
 
 ---
 
+## What This Artifact Is Not
+
+- **Not a postmortem.** The IR documents what happened during an incident: detection, timeline, impact, remediation. Analysis of systemic causes and organizational learning belongs downstream in the RHR or ODK PMR — not in the IR.
+- **Not a root cause prescription.** The IR documents the identified root cause; it does not redesign systems or assign blame. Remediation actions are documented here; architectural recommendations belong downstream.
+- **Not a revised SRP.** If an incident reveals that SLO targets are wrong, the SRP revision process is the appropriate response — the IR documents the incident's SLO impact but does not change SLO definitions.
+
+---
+
 ## Purpose
 
 The Incident Record serves three roles:

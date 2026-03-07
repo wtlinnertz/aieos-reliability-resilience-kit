@@ -6,6 +6,14 @@ This is a **boundary contract**, not a governed artifact. The record is human-au
 
 ---
 
+## What This Artifact Is Not
+
+- **Not a Service Reliability Profile.** The SRER is the entry gate that confirms prerequisites for SRP generation — it does not define SLO targets, error budgets, or measurement methodology. Those belong in the SRP.
+- **Not an authorization to release.** The SRER confirms the Release Record is frozen and the system is in production. The release decision was made upstream in the REK.
+- **Not a substitute for the Release Record.** The SRER captures the baseline from RR §7; it does not summarize or replace the RR's content.
+
+---
+
 ## Purpose
 
 The SRER serves two roles:

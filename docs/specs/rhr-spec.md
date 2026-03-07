@@ -6,6 +6,14 @@ The RHR is a **synthesis artifact** — it does not revise SLOs, reopen incident
 
 ---
 
+## What This Artifact Is Not
+
+- **Not a reliability retrospective or postmortem.** The RHR synthesizes the coverage period's reliability data into a structured picture. Root cause analysis for individual incidents belongs in the IR or ODK PMR.
+- **Not an SRP revision.** If the RHR reveals that SLO targets need to change, the SRP revision process is triggered — the RHR documents the signal, not the new targets.
+- **Not a project plan.** The RHR produces a Layer 7 feed with reliability signals and recommended actions; it does not assign tasks, owners, or delivery dates. Action planning belongs downstream.
+
+---
+
 ## Purpose
 
 The Reliability Health Report serves three roles:

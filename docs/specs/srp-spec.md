@@ -6,6 +6,14 @@ The SRP is **versioned and reused** across incidents and health reports until SL
 
 ---
 
+## What This Artifact Is Not
+
+- **Not a monitoring dashboard configuration.** The SRP defines the standards against which monitoring is configured and evaluated — not the configuration itself. Dashboard setup and alert wiring are operational activities that implement the SRP's specifications.
+- **Not an incident response plan.** The SRP defines what "working correctly" means and what burn rate signals indicate budget consumption. Incident response procedures belong in the ORD or runbooks.
+- **Not an aspirational target document.** All SLO targets in the SRP must be derived from the SRER baseline and intake form — not from "industry standards" or what would be ideal. Targets must reflect what the service actually achieves as a minimum, not what it aspires to.
+
+---
+
 ## Purpose
 
 The SRP serves three roles:

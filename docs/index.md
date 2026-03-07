@@ -93,6 +93,16 @@ This kit governs how production systems are monitored, measured, and kept runnin
 
 ---
 
+## Guides
+
+| Document | Purpose |
+|----------|---------|
+| `session-setup.md` | Per-artifact setup checklists, pre-flight gate checks, and common failure reminders |
+| `troubleshooting.md` | Gate failure remediation guide |
+| `entry-from-rek.md` | Boundary briefing when arriving from the Release & Exposure Kit |
+
+---
+
 ## Tests
 
 `tests/kit-test-plan.md` — S-01 to S-08 structural checks + F-00 to F-02 flow scenarios

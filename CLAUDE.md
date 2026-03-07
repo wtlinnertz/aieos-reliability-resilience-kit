@@ -74,7 +74,7 @@ Step 3: Reliability Health Report → generate from IR history + SRP + coverage 
 
 ## Boundary Contracts
 
-- **Upstream:** Receives a frozen Release Record from the Release & Exposure Kit (Layer 5). The RR §7 Handoff to Layer 6 section is the upstream boundary contract — it provides the production state, active monitoring, SLO baseline, open incidents, and recommended watch items. Confirmed via SRER.
+- **Upstream:** Receives a frozen Release Record from the Release & Exposure Kit (Layer 5). The RR §7 Handoff to Layer 6 section is the upstream boundary contract — it provides the production state, active monitoring, SLO baseline, open incidents, and recommended watch items. Confirmed via SRER. See `docs/entry-from-rek.md` for the boundary briefing.
 - **Downstream (Layer 7):** Produces frozen RHRs that Layer 7 (Insight & Evolution) uses as reliability trend input. The RHR §5 Layer 7 Feed section is the downstream boundary contract — it provides trend direction, systemic issues, improvement signals, and recommended continued watch items.
 - **Downstream (Layer 8):** SEV1/2 incidents trigger the Operational Diagnostics Kit (ODK, Layer 8). RRK provides SRP context to ODK (service baseline, SLO targets, known failure modes). ODK PMRs feed back into the next RHR §Incident Summary. PMR corrective actions may trigger the SRP Revision Protocol. See `aieos-operational-diagnostics-kit` and `docs/playbook.md §Escalation Paths` for the full cross-kit contract.
 
@@ -94,6 +94,8 @@ Step 3: Reliability Health Report → generate from IR history + SRP + coverage 
 - Read the playbook (`docs/playbook.md`) for the full process definition
 - Read the governance model (`docs/governance-model.md`) for structural rules
 - Check `docs/how-to-use-with-ai.md` for session setup instructions
+- Use `docs/session-setup.md` for per-artifact setup checklists and pre-flight gate checks
+- Use `docs/troubleshooting.md` when a validator returns FAIL — maps each gate failure to a specific remediation
 - Reference `examples/basic-operation/` for a complete worked example
 
 ## Building or Auditing AIEOS Kits

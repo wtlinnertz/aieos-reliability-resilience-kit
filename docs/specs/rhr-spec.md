@@ -1,5 +1,7 @@
 # Reliability Health Report — Specification
 
+Version: v1.0
+
 The Reliability Health Report (RHR) is the periodic review artifact of the Reliability & Resilience Kit. It synthesizes SLO compliance data, error budget state, and incident history over a defined coverage period into a structured reliability picture — and produces the Layer 7 feed that downstream insight and evolution systems consume.
 
 The RHR is a **synthesis artifact** — it does not revise SLOs, reopen incidents, or introduce new reliability standards. It reports what happened during the coverage period as measured against the frozen SRP.

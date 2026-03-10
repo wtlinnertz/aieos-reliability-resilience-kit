@@ -1,5 +1,7 @@
 # Service Reliability Profile — Specification
 
+Version: v1.0
+
 The Service Reliability Profile (SRP) is the foundational reliability artifact for a service. It defines what "working correctly" means: the SLO targets the service must meet, the error budget available for each SLO, the burn rate alert thresholds that indicate unsustainable consumption, and the measurement methodology that makes each SLI auditable.
 
 The SRP is **versioned and reused** across incidents and health reports until SLOs change. When SLOs change, a new SRP version is issued; the previous version remains frozen.

@@ -14,6 +14,8 @@
 | Status | Draft / Validated / Freeze Pending / Frozen |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
+| Spec Version | {spec version} |
+| Principles Version | {principles file versions} |
 
 *If multiple SRP versions were active during the coverage period, list all:*
 *SRP versions: v{N} ({start date} – {end date}), v{N+1} ({start date} – {end date})*

@@ -1,5 +1,7 @@
 # Service Reliability Entry Record — Specification
 
+Version: v1.0
+
 The Service Reliability Entry Record (SRER) is the entry gate for the Reliability & Resilience Kit. It must be completed before the Service Reliability Profile can be generated. It confirms the upstream Release Record is frozen, names the reliability owner, confirms that monitoring is active, and captures the SLO baseline from the RR §7 handoff section.
 
 This is a **boundary contract**, not a governed artifact. The record is human-authored. It is validated against this spec before SRP generation begins.

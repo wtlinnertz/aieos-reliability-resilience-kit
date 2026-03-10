@@ -1,5 +1,7 @@
 # Incident Record — Specification
 
+Version: v1.0
+
 The Incident Record (IR) is the per-incident evidence artifact of the Reliability & Resilience Kit. It documents what happened during an incident from first detection through post-incident review: the classification, impact, timeline of events, root cause analysis, remediation actions, and SLO impact.
 
 The IR is an **evidence artifact** — it documents what occurred; it does not revise the SRP or redefine reliability standards. Every entry traces to observable facts.

@@ -29,7 +29,7 @@
 | SLI Metric | {metric name} |
 | Target | {X.X%} |
 | Measurement Window | {e.g., 30-day rolling} |
-| Basis for Target | {historical data reference | contractual requirement | first-release baseline | user research} |
+| Basis for Target | {historical data reference / contractual requirement / first-release baseline / user research} |
 
 ### SLO 2: {SLO Name}
 
@@ -38,7 +38,7 @@
 | SLI Metric | {metric name} |
 | Target | {X.X%} |
 | Measurement Window | {e.g., 30-day rolling} |
-| Basis for Target | {historical data reference | contractual requirement | first-release baseline | user research} |
+| Basis for Target | {historical data reference / contractual requirement / first-release baseline / user research} |
 
 *Add additional SLOs as needed. Minimum 2 required.*
 

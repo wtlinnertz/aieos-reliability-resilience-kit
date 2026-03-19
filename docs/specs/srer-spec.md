@@ -84,6 +84,7 @@ The SRER serves two roles:
 - Source must be identified: ORD, first-release documentation, or prior SRP version
 - At minimum, the metric name, baseline value, and measurement window must be present for each SLO
 - SLO values must not be invented or defaulted (e.g., "99.9% is standard") — they must trace to a source
+- **Deferred baseline allowance:** If RR §7 documents a deferred baseline with a capture trigger, the SRER may reproduce the capture trigger notation ("Deferred — capture trigger: {description}") instead of a concrete value. The capture trigger description, metric name, and target location (where the concrete value will be recorded once captured) must all be present. SRP generation is blocked until at least one concrete SLO baseline exists — an SRER containing only deferred baselines does not satisfy the SRP generation prerequisite.
 
 **Failure Examples**
 - SLO values listed without source

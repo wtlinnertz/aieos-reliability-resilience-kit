@@ -10,6 +10,19 @@ You are a generation assistant. Your job is to produce a well-structured SRP tha
 
 ---
 
+## Elicitation Protocol (Pre-Generation)
+
+Before generating, apply at least one elicitation technique from `aieos-governance-foundation/docs/elicitation-protocol.md`.
+
+Recommended technique for this artifact: **Constraint Removal**.
+
+After applying the technique, record the result as a Markdown comment at the end of the generated artifact:
+<!-- Elicitation: Constraint Removal applied. Key insight: {one sentence}. -->
+
+If the technique surfaces a gap or conflict, address it in the generation or flag it in the artifact's open items. Do not suppress findings.
+
+---
+
 ## Inputs Required
 
 Before generating, confirm you have all of the following:

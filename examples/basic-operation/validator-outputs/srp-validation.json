@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "summary": "SRP-NOTIF-001 v1 passes all 7 hard gates; 3 SLOs with exact metric names, error budgets calculated in both forms, both burn rate alerts defined with numeric thresholds and routing, exclusions policy stated.",
+  "hard_gates": {
+    "document_control": "PASS",
+    "slo_definitions": "PASS",
+    "error_budget": "PASS",
+    "burn_rate_alerts": "PASS",
+    "measurement_methodology": "PASS",
+    "exclusions": "PASS",
+    "standard_enforceability": "PASS"
+  },
+  "blocking_issues": [],
+  "warnings": [
+    {
+      "description": "p99 Latency SLO uses a compliance-based formulation ('99.5% of requests under 400ms') rather than a direct SLI percentage. This is valid but means the error budget time equivalent calculation represents window time, not request time. Ensure monitoring calculates compliance as the fraction of measurement windows where p99 < 400ms, consistent with §5 methodology.",
+      "location": "§2 SLO Definitions — SLO 2 and §3 Error Budget — SLO 2"
+    }
+  ],
+  "completeness_score": "96"
+}

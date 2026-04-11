@@ -2,13 +2,11 @@
 
 **Layer 6 of the AIEOS system — Reliability & Resilience**
 
-This kit governs how production systems are monitored, measured, and kept running. It receives a frozen Release Record (RR) from the Release & Exposure Kit and produces reliability records that document what "working correctly" means, what went wrong and how it was resolved, and how the service is performing over time — feeding reliability signals downstream to Layer 7.
+This kit governs how production systems are monitored, measured, and kept running. It receives a frozen Release Record (RR) from the Release & Exposure Kit and produces reliability records that document what "working correctly" means, what went wrong and how it was resolved, and how the service performs over time, feeding reliability signals downstream to Layer 7.
 
----
+## What this kit does
 
-## What This Kit Does
-
-The Release & Exposure Kit (Layer 5) produces a Release Record that declares the release complete, confirms monitoring is active, and documents an SLO baseline. But "monitoring active" is not the same as "reliability governed." This kit governs the gap:
+The Release & Exposure Kit (Layer 5) produces a Release Record that declares the release complete, confirms monitoring is active, and documents an SLO baseline. But "monitoring active" isn't the same as "reliability governed." This kit fills that gap:
 
 - **SLO definition** — What does "working correctly" mean for this service? (error rates, latency, delivery guarantees)
 - **Error budgets** — How much unreliability is acceptable before action is required?
@@ -16,9 +14,7 @@ The Release & Exposure Kit (Layer 5) produces a Release Record that declares the
 - **Incident management** — What happened, who responded, what was the root cause?
 - **Periodic health reviews** — Is the service trending better or worse over time?
 
----
-
-## Artifact Types
+## Artifact types
 
 This kit produces three governed artifact types plus an entry gate:
 
@@ -31,17 +27,13 @@ This kit produces three governed artifact types plus an entry gate:
 
 Each governed artifact type has exactly four governing files: spec, template, prompt, validator.
 
----
-
-## Quick Start
+## Quick start
 
 1. Read `docs/playbook.md` — the complete process definition
 2. Read `docs/how-to-use-with-ai.md` — session setup and AI tool guidance
 3. See `examples/basic-operation/` — a worked example (TaskFlow notification-service operation)
 
----
-
-## Repository Structure
+## Repository structure
 
 ```
 docs/
@@ -62,9 +54,7 @@ tests/
 CLAUDE.md              # AI operating instructions
 ```
 
----
-
-## AIEOS Layer
+## AIEOS layer
 
 | Layer | Kit | Status |
 |-------|-----|--------|

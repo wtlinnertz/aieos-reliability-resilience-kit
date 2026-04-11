@@ -1,6 +1,6 @@
 # How to Use This Kit with AI
 
-This guide explains how to set up AI sessions for each step in the Reliability & Resilience Kit workflow. Follow the session setup instructions precisely — incorrect session setup is the most common cause of poor artifact quality.
+This guide explains how to set up AI sessions for each step in the Reliability & Resilience Kit workflow. Follow the session setup instructions precisely. Incorrect session setup is the most common cause of poor artifact quality.
 
 ---
 
@@ -8,13 +8,12 @@ This guide explains how to set up AI sessions for each step in the Reliability &
 
 **One artifact per session.** Do not generate multiple artifacts in the same session.
 
-**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated an artifact to validate it — this produces self-validation bias.
+**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated an artifact to validate it. This produces self-validation bias.
 
 **Include full frozen documents.** Do not summarize upstream artifacts. Provide the complete document.
 
----
 
-## SRER — Human-Authored (No AI Generation Session)
+## SRER. Human-Authored (No AI Generation Session)
 
 The SRER is human-authored. Do not use AI to complete it. Complete the template yourself using information from the frozen Release Record.
 
@@ -31,9 +30,8 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in the validator."
 ```
 
----
 
-## SRP — Generation Session
+## SRP. Generation Session
 
 **Session setup:**
 ```
@@ -48,7 +46,7 @@ Prompt:
 "Generate a Service Reliability Profile using the provided inputs.
 Follow the prompt in docs/prompts/srp-prompt.md.
 Use the template exactly. Satisfy all hard gates in the spec.
-Do not invent SLO targets or metric names — mark any missing information
+Do not invent SLO targets or metric names. Mark any missing information
 with [MISSING: reason]. Output pure Markdown."
 ```
 
@@ -70,15 +68,14 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/srp-validator.md."
 ```
 
----
 
-## IR — Generation Session
+## IR. Generation Session
 
 **Session setup:**
 ```
 Documents to provide:
 1. Incident evidence (alert records, metric data, responder notes, timeline)
-2. Frozen SRP (the version active during the incident — check the version field)
+2. Frozen SRP (the version active during the incident. Check the version field)
 3. docs/specs/ir-spec.md
 4. docs/artifacts/ir-template.md
 5. docs/principles/incident-management-principles.md
@@ -88,7 +85,7 @@ Prompt:
 Follow the prompt in docs/prompts/ir-prompt.md.
 Use the template exactly. Severity must be from SEV1–SEV4.
 Calculate SLO impact from the frozen SRP error budget.
-Do not invent root causes or follow-up actions — mark missing information
+Do not invent root causes or follow-up actions. Mark missing information
 with [MISSING: reason]. Output pure Markdown."
 ```
 
@@ -111,14 +108,13 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/ir-validator.md."
 ```
 
----
 
-## RHR — Generation Session
+## RHR. Generation Session
 
 **Session setup:**
 ```
 Documents to provide:
-1. Frozen SRP (the active version for this coverage period — check version)
+1. Frozen SRP (the active version for this coverage period. Check version)
 2. All frozen IRs from the coverage period (provide each IR in full)
 3. Monitoring data export for the coverage period
    (SLO compliance percentages, error budget consumption, burn rate observations)
@@ -156,7 +152,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/rhr-validator.md."
 ```
 
----
 
 ## Utility Prompts
 
@@ -192,7 +187,6 @@ Output candidate targets with basis in the format specified in the prompt.
 All recommendations require human review before use in the intake form."
 ```
 
----
 
 ## Troubleshooting
 
@@ -203,10 +197,10 @@ Check that the generation session included all required inputs. Missing inputs a
 The AI may have paraphrased metric names rather than using exact strings. Provide the exact metric names from your monitoring system in the intake form or incident evidence, and regenerate.
 
 **Root cause analysis is shallow**
-Provide more complete incident evidence to the generation session — especially responder notes and post-incident review discussion. The IR prompt requires this to produce substantive root cause analysis.
+Provide more complete incident evidence to the generation session. Especially responder notes and post-incident review discussion. the ir prompt requires this to produce substantive root cause analysis.
 
 **SLO compliance is difficult to calculate**
 Ensure monitoring data export includes SLI values at sufficient granularity for the measurement window. Aggregated data that does not support the compliance calculation must be documented as a measurement gap.
 
 **Error budget time equivalents are incorrect**
-Verify the measurement window minutes: 30-day = 43,200 min, 28-day = 40,320 min, 7-day = 10,080 min. The AI uses these constants — if your window is different, state it explicitly in the intake form.
+Verify the measurement window minutes: 30-day = 43,200 min, 28-day = 40,320 min, 7-day = 10,080 min. The AI uses these constants. If your window is different, state it explicitly in the intake form.

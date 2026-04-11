@@ -1,10 +1,10 @@
-# Troubleshooting Guide — Reliability Resilience Kit
+# Troubleshooting Guide: Reliability Resilience Kit
 
 ## How to Use This Guide
 
 When a validator returns FAIL, find the failing gate in the table below. The Remediation column describes the specific fix required. Reopen the artifact, apply the remediation, and rerun the validator in a new session.
 
-**Do not embed fix attempts in your validation session.** Validators and generation are separate sessions.
+Validators and generation are separate sessions. Don't embed fix attempts in your validation session.
 
 ---
 
@@ -17,7 +17,7 @@ This is a human-completed entry gate artifact. Fill all fields directly in the t
 | document_control | Missing required fields in §1 | Template not fully completed | Fill §1: ID, service name, owner, date; no field may be blank |
 | upstream_reference | RR §7 not referenced or the referenced section cannot be found | Handoff from REK not verified before starting | Confirm the RR §7 exists and is complete; do not proceed with SRER until the RR §7 handoff is in place |
 | reliability_owner | Reliability owner not named as an individual | Owner left as a team name or role | Name the specific individual who is personally accountable for service reliability |
-| initial_slo_baseline | SLO baseline absent, or referenced by a pointer to RR §7 rather than captured directly | Values not copied from RR §7 into SRER | Copy the SLO baseline values from RR §7 directly into the SRER — do not reference by pointer |
+| initial_slo_baseline | SLO baseline absent, or referenced by a pointer to RR §7 rather than captured directly | Values not copied from RR §7 into SRER | Copy the SLO baseline values from RR §7 directly into the SRER: do not reference by pointer |
 | monitoring_confirmed | Monitoring status not confirmed | Monitoring assumed to be live from ORD | Confirm monitoring is live and state the current service health status explicitly |
 
 ---

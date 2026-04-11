@@ -1,6 +1,6 @@
-# Example: TaskFlow notification-service Operation
+# Example: TaskFlow notification-service Operations
 
-This example demonstrates the complete Layer 6 flow for the TaskFlow notification service after its initial production release.
+This example shows the complete Layer 6 flow for the TaskFlow notification service after its initial production release.
 
 ---
 

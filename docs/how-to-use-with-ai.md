@@ -12,7 +12,6 @@ This guide explains how to set up AI sessions for each step in the Reliability &
 
 **Include full frozen documents.** Do not summarize upstream artifacts. Provide the complete document.
 
-
 ## SRER. Human-Authored (No AI Generation Session)
 
 The SRER is human-authored. Do not use AI to complete it. Complete the template yourself using information from the frozen Release Record.
@@ -29,7 +28,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in the validator."
 ```
-
 
 ## SRP. Generation Session
 
@@ -67,7 +65,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/srp-validator.md."
 ```
-
 
 ## IR. Generation Session
 
@@ -107,7 +104,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/ir-validator.md."
 ```
-
 
 ## RHR. Generation Session
 
@@ -152,7 +148,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/rhr-validator.md."
 ```
 
-
 ## Utility Prompts
 
 ### Incident Triage (during active incidents)
@@ -186,7 +181,6 @@ Analyze the performance distribution and recommend candidate targets.
 Output candidate targets with basis in the format specified in the prompt.
 All recommendations require human review before use in the intake form."
 ```
-
 
 ## Troubleshooting
 

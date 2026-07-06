@@ -27,7 +27,6 @@ The SRP template defaults to 14× fast-burn and 3× slow-burn alerts, which are 
 
 The playbook leaves review cadence as a team decision. If your organization has a standard (e.g., all tier-1 services must produce monthly RHRs), document it in the principles files and update the playbook accordingly.
 
-
 ## What Not to Adapt
 
 ### Specs
@@ -44,7 +43,6 @@ Validators evaluate against specs. If a validator is producing unexpected result
 
 `docs/governance-model.md` is a synchronized copy of the canonical governance model. Do not edit it. If you believe the governance model should change, update `aieos-governance-foundation/governance-model.md` and sync all kit copies.
 
-
 ## Adding Artifact Types
 
 If your organization needs additional governed artifacts (e.g., a capacity planning record, an on-call health report), follow the four-file system:
@@ -55,7 +53,6 @@ If your organization needs additional governed artifacts (e.g., a capacity plann
 4. Write the prompt. Generation behavior, references spec and template
 
 Register the new artifact type in the playbook, index, and CLAUDE.md.
-
 
 ## Tool Bindings
 
@@ -72,7 +69,6 @@ docs/bindings/
 
 Bindings are not governed artifacts. They have no spec, validator, or prompt. update them when your tooling changes without touching the governed files.
 
-
 ## Scaling to Multiple Services
 
 This kit governs one service's reliability per SRP. For organizations with many services:
@@ -82,7 +78,6 @@ This kit governs one service's reliability per SRP. For organizations with many 
 3. If multiple services share an SRP (e.g., microservices with identical SLOs), the SRP scope must explicitly list all covered services.
 
 Consider creating a cross-service reliability dashboard using Layer 7 to aggregate RHR Layer 7 feeds across services.
-
 
 ## First-Time Setup Checklist
 

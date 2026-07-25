@@ -6,13 +6,14 @@
 
 | Field | Value |
 |-------|-------|
-| IR ID | IR-{SERVICE}-{NNN} |
+| Artifact ID | IR-{SERVICE}-{NNN} |
+| Owner | {owner} |
 | SRP ID | SRP-{SERVICE}-{NNN} (version: v{N}) |
 | Incident Start | {YYYY-MM-DD HH:MM UTC} |
 | Incident End | {YYYY-MM-DD HH:MM UTC} |
 | Author | {name} |
 | Review Date | {YYYY-MM-DD} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |

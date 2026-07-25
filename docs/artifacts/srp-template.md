@@ -6,11 +6,11 @@
 
 | Field | Value |
 |-------|-------|
-| SRP ID | SRP-{SERVICE}-{NNN} |
+| Artifact ID | SRP-{SERVICE}-{NNN} |
 | Service Name | {service name} |
 | Owner | {team or role — not an individual person} |
 | Version | v{N} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Scope | {which deployment(s) or environment(s) this SRP governs} |
 | SRER Reference | {SRER-{PROJECT}-{NNN}} |
 | Governance Model Version | 1.0 |

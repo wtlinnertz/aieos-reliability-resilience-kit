@@ -6,12 +6,13 @@
 
 | Field | Value |
 |-------|-------|
-| RHR ID | RHR-{SERVICE}-{NNN} |
+| Artifact ID | RHR-{SERVICE}-{NNN} |
+| Owner | {owner} |
 | Service | {service name} |
 | Coverage Period | {YYYY-MM-DD} through {YYYY-MM-DD} |
 | Review Owner | {individual or role} |
 | SRP Reference | SRP-{SERVICE}-{NNN} (version: v{N}, status: Frozen) |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |
